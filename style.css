@@ -1,0 +1,439 @@
+/* Màu sắc chính */
+:root {
+    --primary-color: #002b5c; /* Xanh Navy Đậm - Chuyên nghiệp */
+    --secondary-color: #ffc72c; /* Vàng/Cam Rực rỡ - Điểm nhấn, mục tiêu */
+    --accent-color: #f0f4f8; /* Xám xanh nhạt - Nền section */
+    --text-color: #333333;
+    --white: #ffffff;
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.7;
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.mt-4 {
+    margin-top: 40px;
+}
+
+/* Global Buttons */
+.btn-cta {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 50px; /* Bo tròn mạnh mẽ */
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.primary-btn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 6px 15px rgba(255, 199, 44, 0.4);
+}
+
+.primary-btn:hover {
+    background-color: #ffb800; 
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 199, 44, 0.6);
+}
+
+.nav-cta {
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 8px 18px;
+    font-size: 0.9em;
+    border-radius: 8px;
+}
+
+.nav-cta:hover {
+    background-color: var(--secondary-color);
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6em;
+    font-weight: 900;
+    color: var(--secondary-color);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+header nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(rgba(0, 43, 92, 0.9), rgba(0, 43, 92, 0.8)), url('path-to-your-ielts-image.jpg') no-repeat center center/cover;
+    color: var(--white);
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero-section h2 {
+    font-size: 3.2em;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    font-weight: 900;
+}
+
+.hero-section strong {
+    color: var(--secondary-color);
+}
+
+.hero-section .pre-heading {
+    font-weight: 600;
+    color: var(--secondary-color);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.hero-section .sub-text {
+    font-size: 1.3em;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.time-commitment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 199, 44, 0.1);
+    border-radius: 8px;
+    padding: 10px 20px;
+    max-width: 400px;
+    margin: 20px auto 40px;
+    border: 1px solid var(--secondary-color);
+}
+
+.time-commitment i {
+    color: var(--secondary-color);
+    font-size: 1.2em;
+}
+
+/* --- General Section Styling --- */
+section {
+    padding: 80px 0;
+}
+
+section:nth-child(even) {
+    background-color: var(--accent-color);
+}
+
+section h3 {
+    text-align: center;
+    font-size: 2.2em;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    font-weight: 800;
+}
+
+/* --- Goals Section --- */
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.goal-item {
+    background-color: var(--white);
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    border-top: 6px solid var(--primary-color);
+}
+
+.goal-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary-color);
+}
+
+.goal-item i {
+    font-size: 2.8em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.goal-item h4 {
+    color: var(--primary-color);
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+.goal-item .current-band {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.goal-item .target-band {
+    font-size: 1.8em;
+    font-weight: 900;
+    color: var(--secondary-color);
+    line-height: 1;
+}
+
+.highlight-target {
+    color: #cc4400; /* Màu cam đậm hơn cho điểm neo 6.0 */
+}
+
+.overall-target {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-top: 30px;
+    padding: 15px;
+    border: 3px dashed var(--secondary-color);
+    display: inline-block;
+}
+
+/* --- Roadmap Section (Giai Đoạn) --- */
+.roadmap-phase {
+    background-color: var(--white);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.roadmap-phase h4 {
+    font-size: 1.8em;
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.roadmap-phase i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.week-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.week-card {
+    background-color: var(--accent-color);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.week-card h5 {
+    color: var(--primary-color);
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.week-card p {
+    font-size: 0.95em;
+    margin-top: 10px;
+}
+
+.week-card strong {
+    color: #c70039; /* Màu đỏ cho trọng tâm */
+}
+
+/* --- Strategy Section --- */
+.strategy-section {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+}
+
+.strategy-section h3 {
+    color: var(--secondary-color);
+    font-size: 2.5em;
+}
+
+.strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.strategy-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    border-bottom: 4px solid var(--secondary-color);
+}
+
+.strategy-item i {
+    font-size: 3em;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.strategy-item h4 {
+    margin-top: 0;
+    color: var(--white);
+    font-weight: 800;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    text-align: center;
+    background-color: var(--white);
+}
+
+.contact-section p {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.contact-form {
+    max-width: 650px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 199, 44, 0.3);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 25px 0;
+    font-size: 0.9em;
+    border-top: 5px solid var(--secondary-color);
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.4em;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- Media Queries (Responsive) --- */
+@media (max-width: 992px) {
+    .goals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .week-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section h2 {
+        font-size: 2.5em;
+    }
+    
+    header nav {
+        display: none; /* Ẩn menu nav bar */
+    }
+    
+    header .container {
+        justify-content: center;
+    }
+
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .strategy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
